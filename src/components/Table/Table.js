@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledTable } from "./Table.elements";
-import { Container } from "../../globalStyles";
+import React from 'react';
+import { StyledTable } from './Table.elements';
+import { Container } from '../../globalStyles';
 
 const Table = ({ data }) => (
   <Container>

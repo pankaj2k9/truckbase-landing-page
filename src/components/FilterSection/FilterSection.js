@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container } from "../../globalStyles";
+import React, { useState } from 'react';
+import { Container } from '../../globalStyles';
 import {
   Heading,
   Form,
@@ -8,11 +8,9 @@ import {
   InputWarpper,
   SubmitButton,
   Error,
-} from "./FilterSection.elements";
+} from './FilterSection.elements';
 
-
-
-const FilterSection = ({handleSubmit, handleChange, errors, values}) => {
+const FilterSection = ({ handleSubmit, handleChange, errors, values }) => {
   return (
     <Container>
       <Heading>Book a Truck with One Click!</Heading>
@@ -46,6 +44,6 @@ const FilterSection = ({handleSubmit, handleChange, errors, values}) => {
       </Form>
     </Container>
   );
-}
+};
 
 export default FilterSection;

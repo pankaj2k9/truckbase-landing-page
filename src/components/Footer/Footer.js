@@ -20,7 +20,7 @@ import {
 
 function Footer() {
   return (
-    <FooterContainer>
+    <FooterContainer> 
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo to="/">

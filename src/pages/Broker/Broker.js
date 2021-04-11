@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { FilterSection } from "../../components";
-import { Table  } from '../../components';
-import { data } from './Data'
+import React, { useState } from 'react';
+import { FilterSection, Table } from '../../components';
+
+import { data } from './Data';
+
 function Home() {
   const [errors, setErrors] = useState({
-    origin: "",
-    destination: "",
+    origin: '',
+    destination: '',
   });
   const [values, setValues] = useState({
-    origin: "",
-    destination: "",
+    origin: '',
+    destination: '',
   });
 
   const isUsZipCode = (str) => {
@@ -17,25 +18,20 @@ function Home() {
 
     if (regexp.test(str)) {
       return true;
-    } else {
-      return false;
     }
+    return false;
   };
   const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
     const localeErrors = { ...errors };
     switch (name) {
-      case "origin":
-        localeErrors.origin = !isUsZipCode(value)
-          ? "Please put a valid zip code"
-          : "";
+      case 'origin':
+        localeErrors.origin = !isUsZipCode(value) ? 'Please put a valid zip code' : '';
         setValues({ ...values, [name]: value });
         break;
-      case "destination":
-        localeErrors.destination = !isUsZipCode(value)
-          ? "Please put a valid zip code"
-          : "";
+      case 'destination':
+        localeErrors.destination = !isUsZipCode(value) ? 'Please put a valid zip code' : '';
         setValues({ ...values, [name]: value });
         break;
 
@@ -49,9 +45,9 @@ function Home() {
     const { origin, destination } = values;
     const localeErrors = { ...errors };
     if (!isUsZipCode(origin)) {
-      localeErrors.origin = "Please put a valid zip code";
+      localeErrors.origin = 'Please put a valid zip code';
     } else if (!isUsZipCode(destination)) {
-      localeErrors.destination = "Please put a valid zip code";
+      localeErrors.destination = 'Please put a valid zip code';
     } else {
       return true;
     }

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledTable = styled.table`
   margin: 3rem 0;
@@ -55,7 +55,7 @@ export const StyledTable = styled.table`
     padding: 1rem;
   }
   thead tr td {
-    padding: .8rem;
+    padding: 0.8rem;
   }
   caption {
     font-size: 0.9em;
