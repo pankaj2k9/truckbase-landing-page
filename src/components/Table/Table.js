@@ -9,7 +9,6 @@ const COLUMNS = [
   { Header: 'Carrier Name', accessor: 'carrier' },
   { Header: 'Deadhead', accessor: 'deadhead' },
   { Header: 'Safety Score', accessor: 'safety' },
-  { Header: 'Acceptance Rate', accessor: 'acceptance' },
   { Header: 'Price', accessor: 'price' },
   { Header: '', accessor: 'edit' },
 ];
@@ -19,13 +18,14 @@ function Table({ data }) {
     {
       columns: COLUMNS,
       data: (data || []).map((d, index) => {
-        const { carrier, deadhead, calculatedTruckPrice } = d;
+        const { carrier, deadhead, safety, price } = d;
 
         return {
           index: index + 1,
           carrier,
           deadhead,
-          price: calculatedTruckPrice,
+          price,
+          safety,
         };
       }),
       autoResetSortBy: false,
@@ -71,14 +71,7 @@ function Table({ data }) {
                       </S.SafetyScoreHeader>
                     );
                   }
-                  if (col.id === 'acceptance') {
-                    return (
-                      <S.AcceptanceRateHeader {...col.getHeaderProps(col.getSortByToggleProps())}>
-                        {col.render('Header')}
-                        <span>{col.isSorted ? (col.isSortedDesc ? ' 🔽' : ' 🔼') : ''}</span>
-                      </S.AcceptanceRateHeader>
-                    );
-                  }
+
                   if (col.id === 'price') {
                     return (
                       <S.PriceHeader {...col.getHeaderProps(col.getSortByToggleProps())}>
@@ -102,7 +95,6 @@ function Table({ data }) {
                       <S.CarrierNameCell>{row.values.carrier}</S.CarrierNameCell>
                       <S.DeadheadCell>{row.values.deadhead}</S.DeadheadCell>
                       <S.SafetyScoreCell>{row.values.safety}</S.SafetyScoreCell>
-                      <S.AcceptanceRateCell>{row.values.acceptance}</S.AcceptanceRateCell>
                       <S.PriceCell>{row.values.price}</S.PriceCell>
                       <S.ActionCell>
                         <S.BookNowBtn>Book Now</S.BookNowBtn>
