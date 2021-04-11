@@ -1,13 +1,13 @@
-import React from "react";
-import GlobalStyle, { Main } from "./globalStyles";
-import Broker from "./pages/Broker/Broker";
-import Carrier from "./pages/Carrier/Carrier";
-import Help from "./pages/Help/Help";
-import SignUp from "./pages/SignUp/SignUp";
-import Login from "./pages/Login/Login";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import { Navbar, Footer } from "./components";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import GlobalStyle, { Main } from './globalStyles';
+import Broker from './pages/Broker/Broker';
+import Carrier from './pages/Carrier/Carrier';
+import Help from './pages/Help/Help';
+import SignUp from './pages/SignUp/SignUp';
+import Login from './pages/Login/Login';
+import ScrollToTop from './components/ScrollToTop';
+import { Navbar, Footer } from './components';
 
 function App() {
   return (

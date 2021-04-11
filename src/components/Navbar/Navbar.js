@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
-import { Button } from "../../globalStyles";
+import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { IconContext } from 'react-icons/lib';
+import { Button } from '../../globalStyles';
 import {
   Nav,
   NavbarContainer,
   NavLogo,
-  NavIcon,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -14,7 +13,7 @@ import {
   NavLinks,
   NavBtnLink,
   NavMainMenu,
-} from "./Navbar.elements";
+} from './Navbar.elements';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -35,19 +34,17 @@ function Navbar() {
     showButton();
   }, []);
 
-  window.addEventListener("resize", showButton);
+  window.addEventListener('resize', showButton);
 
   return (
     <>
-      <IconContext.Provider value={{ color: "#fff" }}>
+      <IconContext.Provider value={{ color: '#fff' }}>
         <Nav>
           <NavbarContainer>
             <NavLogo to="/" onClick={closeMobileMenu}>
               truckbase
             </NavLogo>
-            <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
-            </MobileIcon>
+            <MobileIcon onClick={handleClick}>{click ? <FaTimes /> : <FaBars />}</MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavMainMenu>
                 <NavItem>

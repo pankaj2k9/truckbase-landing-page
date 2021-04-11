@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FaTruck} from 'react-icons/fa';
+import { FaTruck } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { Container } from '../../globalStyles';
 
@@ -9,10 +9,9 @@ export const FooterContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width:100%;
+  width: 100%;
   padding: 2rem 0 2rem;
 `;
-
 
 export const SocialMedia = styled(Container)`
   width: 100%;

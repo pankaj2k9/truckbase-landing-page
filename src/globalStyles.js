@@ -17,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
 
 `;
 export const Main = styled.div`
-flex:1;
-`
+  flex: 1;
+`;
 export const Container = styled.div`
   z-index: 1;
   width: 100%;

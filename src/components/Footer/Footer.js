@@ -1,31 +1,22 @@
-import React from "react";
-import { Button } from "../../globalStyles";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
+import React from 'react';
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+
 import {
   FooterContainer,
   SocialMedia,
   SocialMediaWrap,
   SocialLogo,
-  SocialIcon,
   WebsiteRights,
   SocialIcons,
   SocialIconLink,
-} from "./Footer.elements";
+} from './Footer.elements';
 
 function Footer() {
   return (
-    <FooterContainer> 
+    <FooterContainer>
       <SocialMedia>
         <SocialMediaWrap>
-          <SocialLogo to="/">
-            truckbase
-          </SocialLogo>
+          <SocialLogo to="/">truckbase</SocialLogo>
           <WebsiteRights>truckbase © 2020</WebsiteRights>
           <SocialIcons>
             <SocialIconLink href="/" target="_blank" aria-label="Facebook">
@@ -35,9 +26,7 @@ function Footer() {
               <FaInstagram />
             </SocialIconLink>
             <SocialIconLink
-              href={
-                "//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber"
-              }
+              href="//www.youtube.com/channel/UCsKsymTY_4BYR-wytLjex7A?view_as=subscriber"
               rel="noopener noreferrer"
               target="_blank"
               aria-label="Youtube"

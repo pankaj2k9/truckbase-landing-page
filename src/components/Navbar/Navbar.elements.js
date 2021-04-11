@@ -74,16 +74,15 @@ export const NavMenu = styled.ul`
   }
 `;
 export const NavMainMenu = styled.ul`
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-left: 10%;
-    @media screen and (max-width: 960px) {
-      flex-direction: column;
-      margin-left: 0;
-    }
-`
-
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 10%;
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    margin-left: 0;
+  }
+`;
 
 export const NavItem = styled.li`
   border-bottom: 2px solid transparent;

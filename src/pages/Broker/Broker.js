@@ -13,6 +13,8 @@ function Home() {
     destination: '',
   });
 
+  const [filteredData, setFilteredData] = useState(null);
+
   const isUsZipCode = (str) => {
     const regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
 
@@ -52,16 +54,21 @@ function Home() {
       return true;
     }
     setErrors(localeErrors);
+    return false;
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const { origin, destination } = values;
     if (errors.origin.length === 0 && errors.destination.length === 0 && validateForm()) {
-      console.log(origin, destination);
+      const tempData = data.filter(
+        (truck) => origin < truck.available && truck.available < destination
+      );
+      setFilteredData(tempData);
+    } else {
+      setFilteredData(null);
     }
   };
-
   return (
     <>
       <FilterSection
@@ -70,7 +77,8 @@ function Home() {
         errors={errors}
         values={values}
       />
-      <Table data={data} />
+
+      {filteredData && filteredData.length > 0 && <Table data={filteredData} />}
     </>
   );
 }

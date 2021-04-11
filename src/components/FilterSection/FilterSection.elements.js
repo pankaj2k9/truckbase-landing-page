@@ -1,12 +1,13 @@
-import styled from "styled-components";
-import { Button } from "../../globalStyles";
+import styled from 'styled-components';
+import { Button } from '../../globalStyles';
+
 export const Heading = styled.h1`
   margin: 24px 0px;
   font-size: 2rem;
   text-align: center;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
+  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#1c2237')};
 `;
 
 export const Form = styled.form`
@@ -23,8 +24,6 @@ export const Label = styled.label`
   color: #242424;
   margin-bottom: 1rem;
 `;
-
-
 
 export const FormInput = styled.input`
   padding: 10px 20px;
@@ -52,9 +51,8 @@ export const InputWarpper = styled.div`
 `;
 
 export const SubmitButton = styled(Button)`
-  margin-top:2rem;
-
-`
+  margin-top: 2rem;
+`;
 export const Error = styled.span`
   color: red;
-`
+`;

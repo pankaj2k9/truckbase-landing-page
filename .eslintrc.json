@@ -43,7 +43,7 @@
       "no-param-reassign": ["error", { "props": false }],
       "no-underscore-dangle": ["error", { "allow": ["__typename"] }],
       "no-nested-ternary": "off",
-      "react/prop-types": "off",
+      "react/prop-types": "off"
     },
     "settings": {
       "import/resolver": {
