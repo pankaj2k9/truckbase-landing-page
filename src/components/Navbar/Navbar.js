@@ -15,7 +15,7 @@ import {
   NavMainMenu,
 } from './Navbar.elements';
 
-function Navbar() {
+const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -87,6 +87,6 @@ function Navbar() {
       </IconContext.Provider>
     </>
   );
-}
+};
 
 export default Navbar;

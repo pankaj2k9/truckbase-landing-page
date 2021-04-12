@@ -9,24 +9,22 @@ import Login from './pages/Login/Login';
 import ScrollToTop from './components/ScrollToTop';
 import { Navbar, Footer } from './components';
 
-function App() {
-  return (
-    <Router>
-      <GlobalStyle />
-      <ScrollToTop />
-      <Navbar />
-      <Main>
-        <Switch>
-          <Route path="/" exact component={Broker} />
-          <Route path="/carrier" component={Carrier} />
-          <Route path="/help" component={Help} />
-          <Route path="/login" component={Login} />
-          <Route path="/sign-up" component={SignUp} />
-        </Switch>
-      </Main>
-      <Footer />
-    </Router>
-  );
-}
+const App = () => (
+  <Router>
+    <GlobalStyle />
+    <ScrollToTop />
+    <Navbar />
+    <Main>
+      <Switch>
+        <Route path="/" exact component={Broker} />
+        <Route path="/carrier" component={Carrier} />
+        <Route path="/help" component={Help} />
+        <Route path="/login" component={Login} />
+        <Route path="/sign-up" component={SignUp} />
+      </Switch>
+    </Main>
+    <Footer />
+  </Router>
+);
 
 export default App;

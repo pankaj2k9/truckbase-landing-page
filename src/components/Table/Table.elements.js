@@ -14,6 +14,7 @@ export const TrucksTable = styled.div`
 export const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
+  border: 1px solid #000000;
 `;
 
 export const THead = styled.thead``;

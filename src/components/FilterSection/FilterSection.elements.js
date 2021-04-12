@@ -48,6 +48,7 @@ export const InputWarpper = styled.div`
   padding: 10px 20px;
   flex-direction: column;
   display: flex;
+  min-height: 7rem;
 `;
 
 export const SubmitButton = styled(Button)`

@@ -1,7 +1,5 @@
 import React from 'react';
 
-function SignUp() {
-  return <div>Coming soon ......</div>;
-}
+const Login = () => <div>Coming soon ......</div>;
 
-export default SignUp;
+export default Login;

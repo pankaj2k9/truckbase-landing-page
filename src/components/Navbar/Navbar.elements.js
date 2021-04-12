@@ -28,9 +28,11 @@ export const NavLogo = styled(Link)`
   justify-self: flex-start;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
+  font-family: 'Open Sans Regular';
+  font-size: 30px;
+  margin-left: 20px;
 `;
 
 export const NavIcon = styled(FaTruck)`

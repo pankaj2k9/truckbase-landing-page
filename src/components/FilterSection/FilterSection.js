@@ -37,9 +37,11 @@ const FilterSection = ({ handleSubmit, handleChange, errors, values }) => (
         />
         {errors.destination.length > 0 && <Error>{errors.destination}</Error>}
       </InputWarpper>
-      <SubmitButton fontBig type="submit">
-        Get Price
-      </SubmitButton>
+      <InputWarpper>
+        <SubmitButton fontBig type="submit">
+          Get Price
+        </SubmitButton>
+      </InputWarpper>
     </Form>
   </Container>
 );

@@ -1,7 +1,5 @@
 import React from 'react';
 
-function Services() {
-  return <div>Coming soon ......</div>;
-}
+const Carrier = () => <div>Coming soon ......</div>;
 
-export default Services;
+export default Carrier;

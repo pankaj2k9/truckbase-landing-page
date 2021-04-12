@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { useTable, useSortBy } from 'react-table';
+import { useHistory } from 'react-router-dom';
 import * as S from './Table.elements';
 import { Container } from '../../globalStyles';
 
@@ -13,7 +14,7 @@ const COLUMNS = [
   { Header: '', accessor: 'edit' },
 ];
 
-function Table({ data }) {
+const Table = ({ data }) => {
   const { getTableProps, getTableBodyProps, headers, rows, prepareRow } = useTable(
     {
       columns: COLUMNS,
@@ -32,6 +33,12 @@ function Table({ data }) {
     },
     useSortBy
   );
+
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push('/sign-up');
+  };
 
   // Render the UI for your table
   return (
@@ -97,7 +104,7 @@ function Table({ data }) {
                       <S.SafetyScoreCell>{row.values.safety}</S.SafetyScoreCell>
                       <S.PriceCell>{row.values.price}</S.PriceCell>
                       <S.ActionCell>
-                        <S.BookNowBtn>Book Now</S.BookNowBtn>
+                        <S.BookNowBtn onClick={handleClick}>Book Now</S.BookNowBtn>
                       </S.ActionCell>
                     </S.TBodyRow>
                   );
@@ -108,6 +115,6 @@ function Table({ data }) {
       </S.TrucksTable>
     </Container>
   );
-}
+};
 
 export default Table;

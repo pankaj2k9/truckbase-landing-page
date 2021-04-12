@@ -3,7 +3,7 @@ import { FilterSection, Table } from '../../components';
 
 import { data } from './Data';
 
-function Home() {
+const Home = () => {
   const [errors, setErrors] = useState({
     origin: '',
     destination: '',
@@ -81,6 +81,6 @@ function Home() {
       {filteredData && filteredData.length > 0 && <Table data={filteredData} />}
     </>
   );
-}
+};
 
 export default Home;
