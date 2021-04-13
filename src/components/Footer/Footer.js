@@ -16,7 +16,7 @@ const Footer = () => (
     <SocialMedia>
       <SocialMediaWrap>
         <SocialLogo to="/">truckbase</SocialLogo>
-        <WebsiteRights>truckbase © 2020</WebsiteRights>
+        <WebsiteRights>© 2020 truckbase </WebsiteRights>
         <SocialIcons>
           <SocialIconLink href="/" target="_blank" aria-label="Facebook">
             <FaFacebook />

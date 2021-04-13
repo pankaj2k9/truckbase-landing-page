@@ -46,6 +46,10 @@ export const SocialIcon = styled(FaTruck)`
 
 export const WebsiteRights = styled.small`
   color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: normal;
+  color: rgb(175, 175, 175);
 `;
 
 export const SocialIcons = styled.div`

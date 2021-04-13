@@ -9,7 +9,8 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 24px;
+  line-height: 32px;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -124,9 +125,10 @@ export const NavLinks = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 10px 12px;
   height: 100%;
-
+  font-size: 14px;
+  line-height: 16px;
   @media screen and (max-width: 960px) {
     text-align: center;
     padding: 2rem;
