@@ -4,6 +4,7 @@ import { Container } from '../../globalStyles';
 import {
   Heading,
   Form,
+  // FormInput,
   Label,
   InputWarpper,
   SubmitButton,
@@ -42,7 +43,13 @@ const FilterSection = ({ handleSubmit, handleChange, errors, values }) => (
                 className: 'google-place-input',
               }}
             />
-
+            {/* <FormInput
+              name="origin"
+              type="number"
+              placeholder="Origin"
+              onChange={handleChange}
+              value={values.origin}
+            /> */}
             {errors.origin.length > 0 && <Error>{errors.origin}</Error>}
           </InputWarpper>
           <InputWarpper>
