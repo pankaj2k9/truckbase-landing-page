@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button } from '../../globalStyles';
+import img from '../../assests/images/location.svg';
 
 export const Heading = styled.h1`
   margin: 0;
@@ -45,16 +46,37 @@ export const Label = styled.label`
 `;
 
 export const FormInput = styled.input`
-  padding: 10px 20px;
+  padding: 10px 20px 10px 30px;
   border-radius: 5px;
   margin-right: 10px;
   outline: none;
   font-size: 16px;
-  border: 1px solid #000;
+  border: none;
   color: #242424;
+  background-color: rgb(238, 238, 238);
+  background-position: 6px center;
+  background-size: 5%;
+
+    background-image: url(${img});
+
+    background-repeat: no-repeat;
 
   &::placeholder {
     color: #24242480;
+  }
+  &::before {
+    content: ""; 
+    position: absolute; 
+    left: 8px; 
+    top: 0; 
+    bottom: 0; 
+    width: 20px;
+    height: 100%; 
+    background-image: url(${img});
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
   }
 
   @media screen and (max-width: 820px) {

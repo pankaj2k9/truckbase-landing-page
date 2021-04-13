@@ -1,10 +1,10 @@
 import React from 'react';
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+// import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import { Container } from '../../globalStyles';
 import {
   Heading,
   Form,
-  // FormInput,
+  FormInput,
   Label,
   InputWarpper,
   SubmitButton,
@@ -33,7 +33,7 @@ const FilterSection = ({ handleSubmit, handleChange, errors, values }) => (
           <InputWarpper>&nbsp;</InputWarpper>
           <InputWarpper>
             <Label htmlFor="origin">Pickup location </Label>
-            <GooglePlacesAutocomplete
+            {/* <GooglePlacesAutocomplete
               apiKey="AIzaSyC9j_lPWXHAXochqDdcIxivggT7D0RQmdw"
               selectProps={{
                 name: 'origin',
@@ -42,20 +42,20 @@ const FilterSection = ({ handleSubmit, handleChange, errors, values }) => (
                 placeholder: 'ZIP code or city name',
                 className: 'google-place-input',
               }}
-            />
-            {/* <FormInput
+            /> */}
+            <FormInput
               name="origin"
               type="number"
               placeholder="Origin"
               onChange={handleChange}
               value={values.origin}
-            /> */}
+            />
             {errors.origin.length > 0 && <Error>{errors.origin}</Error>}
           </InputWarpper>
           <InputWarpper>
             <Label htmlFor="destination">Dropoff location</Label>
 
-            <GooglePlacesAutocomplete
+            {/* <GooglePlacesAutocomplete
               apiKey="AIzaSyC9j_lPWXHAXochqDdcIxivggT7D0RQmdw"
               selectProps={{
                 name: 'destination',
@@ -64,6 +64,13 @@ const FilterSection = ({ handleSubmit, handleChange, errors, values }) => (
                 placeholder: 'ZIP code or city name',
                 className: 'google-place-input',
               }}
+            /> */}
+            <FormInput
+              name="destination"
+              type="number"
+              placeholder="Destination"
+              onChange={handleChange}
+              value={values.destination}
             />
 
             {errors.destination.length > 0 && <Error>{errors.destination}</Error>}
